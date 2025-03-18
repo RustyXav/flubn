@@ -1,0 +1,18 @@
+:host {
+  background-color: rgb(45, 160, 64);
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  border: thin solid;
+}
+
+div {
+  width: 33%;
+  display: inline-block;
+}
+
+
+div > div {
+  width: min-content;
+  display: inline-block;
+}

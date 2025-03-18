@@ -1,0 +1,11 @@
+<div>
+  <input
+    type="radio"
+    name="booking_type_selector_group"
+    (change)="radioChange()"
+    value="{{ RelativePath() }}"
+    id="{{ ID() }}"
+    [(checked)]="Checked"
+  />
+  <label for="{{ ID() }}">{{ Label() }}</label>
+</div>

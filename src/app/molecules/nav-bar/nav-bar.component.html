@@ -1,0 +1,10 @@
+<p>nav-bar works!</p>
+<nav>
+  @for (pathData of pathDatas; track $index) {
+  <li>
+    <a routerLink="{{ pathData.path }}" routerLinkActive="active">{{
+      pathData.label
+    }}</a>
+  </li>
+  }
+</nav>

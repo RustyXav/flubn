@@ -1,0 +1,13 @@
+<h3>What ?</h3>
+<div id="jkehkge">
+  @for (bookingOption of bookingOptions; track $index) {
+  <div class="aaaa">
+    <app-booking-selector-radio
+      [ID]="$index"
+      [RelativePath]="bookingOption.relativePath"
+      [(Checked)]="bookingOption.checked"
+      [Label]="bookingOption.label"
+    ></app-booking-selector-radio>
+  </div>
+  }
+</div>

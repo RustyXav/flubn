@@ -1,0 +1,11 @@
+:host {
+  background-color: bisque;
+  display: block;
+}
+
+:host > div {
+  padding: 5px;
+  border-color: black;
+  border-width: thin;
+  border-style: solid;
+}
