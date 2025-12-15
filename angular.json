@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/flubn",
+            "outputPath": "dist/end_of_training_app",
             "baseHref": "/flubn/",
             "index": "src/index.html",
             "browser": "src/main.ts",
