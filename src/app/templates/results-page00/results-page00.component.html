@@ -1,0 +1,21 @@
+<div class="h-full flex flex-col sm:block">
+  <div class="h-[33.3333dvh] sm:w-1/2 sm:h-1/2 sm:float-right">
+    <div id="testmap" class="z-0 w-full h-full"></div>
+  </div>
+  <div
+    class="flex-1 overflow-y-auto bg-black/10 sm:w-1/2 sm:float-left sm:h-full"
+  >
+    @for (displayedHotel of displayedHotels; track displayedHotel) {
+    <app-hotel-card
+      [HotelInformations]="displayedHotel"
+      (HotelClicked)="diplayHotelInfo($event)"
+    ></app-hotel-card>
+    }
+  </div>
+  @if (isOverlayVisible()) {
+  <app-hotel-description-overlay
+    [hotel]="clickedHotel"
+    (IsVisible)="ChangeOverlayVisible($event)"
+  ></app-hotel-description-overlay>
+  }
+</div>

@@ -1,0 +1,15 @@
+<div class="w-full">
+  <h3 class="pl-1.5">What ?</h3>
+  <div class="overflow-hidden pt-1">
+    @for (bookingOption of bookingOptions; track $index) {
+    <div class="whitespace-nowrap overflow-hidden float-left w-1/2 pt-2">
+      <app-booking-selector-radio
+        [ID]="$index"
+        [RelativePath]="bookingOption.relativePath"
+        [(Checked)]="bookingOption.checked"
+        [Label]="bookingOption.label"
+      ></app-booking-selector-radio>
+    </div>
+    }
+  </div>
+</div>

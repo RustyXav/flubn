@@ -1,0 +1,8 @@
+<p class="text-left font-bold uppercase p-3 pb-0 text-6xl">{{ this.hotel.name }}</p>
+
+<div class="text-justify p-3">
+  <img src="{{ this.hotel.imgURL }}" alt="Example" class="float-left w-1/4 mr-5" />
+  @for (p of this.hotelDescription; track p) {
+  <p>{{ p }}</p>
+  }
+</div>

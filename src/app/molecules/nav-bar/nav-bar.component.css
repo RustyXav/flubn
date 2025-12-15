@@ -1,21 +1,7 @@
-nav {
-  background-color: blueviolet;
-  display: flex;
-}
-
-a {
-  background-color: aqua;
-  margin: 5px;
-  padding: 5px;
-  display: block;
-}
-
-a.active {
-  background-color: chocolate;
-  
-}
-
 li {
   list-style-type: none;
-  
+}
+
+.active {
+  background-color: #5fc8c2;
 }

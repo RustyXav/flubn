@@ -1,0 +1,22 @@
+<ul class="group bg-inherit">
+  <li>
+    <div class="px-5 py-1 select-none">
+      {{ currencyService.CurrentCurrencyCode() | currencySymbol }}
+    </div>
+  </li>
+  <div
+    class="overflow-y-hidden absolute right-0 z-1 bg-inherit 
+    transition-[max-height] 
+    duration-2000 
+    max-h-0 group-hover:max-h-1/4 
+    "
+  >
+    @for (currency of currencyService.leftovers(); track currency) {
+    <li class="hover:bg-black/10 active:bg-black/30">
+      <button class="px-5 py-1" (click)="SwitchTo(currency)">
+        {{ currency | currencySymbol }}
+      </button>
+    </li>
+    }
+  </div>
+</ul>

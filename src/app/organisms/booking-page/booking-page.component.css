@@ -1,30 +1,4 @@
-:host {
-  background-color: sienna;
-  display: block;
-}
-
-:host > div {
-  background-color: rgb(17, 122, 136);
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-:host > div > div {
-  display: flex;
-}
-
-#selector {
-  width: 25%;
-}
-#specific_search {
-  width: 75%;
-}
-
-:host > div > button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -18px;
-  z-index: 0;
-  position: relative;
+button {
+  box-shadow: unset;
+  margin: unset;
 }

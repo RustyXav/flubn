@@ -1,12 +1,24 @@
-<p>blablablah some carousel blablablah</p>
-<div>
-  <div>
-    <div class="aaaa" id="selector">
+<app-carousel></app-carousel>
+<div
+  class="max-w-md mx-auto lg:max-w-5xl text-left lg:-mt-49 bg-white relative lg:pt-3"
+>
+  <div class="lg:flex lg:text-[12px]">
+    <div class="w-full lg:w-1/4" id="selector">
       <app-booking-type-selector></app-booking-type-selector>
     </div>
-    <div id="specific_search">
-      <router-outlet></router-outlet>
+    <div class="w-full lg:w-3/4" id="specific_search">
+      <router-outlet (activate)="onFormActivate($event)"></router-outlet>
     </div>
   </div>
-  <button type="submit" form="blablaform">Proceed to results</button>
+  <div class="mx-auto flex justify-center pt-2 lg:pt-0">
+    <button
+      id="search-submit"
+      class="rounded-t-2xl bg-linear-to-b from-[#5FC8C2] to-[#41AFAA] hover:bg-linear-to-b hover:to-[#5FC8C2] hover:from-[#41AFAA] uppercase text-white px-4 py-2 font-extrabold text-shadow-[0_-1px_0_rgba(0,0,0,0.2)] disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed"
+      type="submit"
+      form="blablaform"
+      [disabled]="!isSearchValid()"
+    >
+      Proceed to results
+    </button>
+  </div>
 </div>

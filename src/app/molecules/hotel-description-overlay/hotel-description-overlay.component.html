@@ -1,0 +1,57 @@
+<div
+  class="fixed left-0 right-0 top-0 bottom-0 backdrop-blur-xs sm:backdrop-blur-none sm:static"
+>
+  <div
+    class="bg-white absolute bottom-auto top-20 inset-1/10 sm:static sm:w-1/2 sm:h-1/2 sm:float-end"
+  >
+    <button
+      type="button"
+      class="group w-4 sm:w-5 md:w-6 lg:w-7 p-0.5 float-right hover:bg-red-900 m-1"
+      (click)="Close()"
+    >
+      <svg
+        class="w-full h-full group-hover:fill-white fill-red-900"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M4 1A1 1 0 001 4l6 6-6 6a1 1 0 003 3l6-6 6 6a1 1 0 003-3l-6-6 6-6A1 1 0 0016 1L10 7 4 1"
+        />
+      </svg>
+    </button>
+    <h1 class="text-lg font-bold margin m-1">{{ hotelName }}</h1>
+    <div class="max-w-2xs">
+      <div class="grid columns-2">
+        <h2 class="">Total persons :</h2>
+        <p class="col-start-2 text-end">{{ hotel().TotalPersons }}</p>
+      </div>
+      <div class="grid columns-2">
+        <h2>Total Rooms :</h2>
+        <p class="col-start-2 text-end">{{ hotel().TotalRooms }}</p>
+      </div>
+      <div class="grid columns-2">
+        <h2>Total nights :</h2>
+        <p class="col-start-2 text-end">{{ hotel().TotalNights }}</p>
+      </div>
+      <div class="grid columns-2">
+        <h2>Total price :</h2>
+        <p class="col-start-2 text-end">{{ hotel().TotalPrice }}€</p>
+      </div>
+
+      <div class="float-right">
+        <button
+          class="m-1 p-1 rounded-2xl bg-linear-to-b from-[#5FC8C2] to-[#41AFAA] hover:bg-linear-to-b hover:to-[#5FC8C2] hover:from-[#41AFAA] uppercase text-white font-bold text-shadow-[0_-1px_0_rgba(0,0,0,0.2)]"
+          type="button"
+          (click)="AddToCart()"
+        >
+          Add to cart
+        </button>
+        <button
+          class="p-1 rounded-2xl bg-linear-to-b from-[#5FC8C2] to-[#41AFAA] hover:bg-linear-to-b hover:to-[#5FC8C2] hover:from-[#41AFAA] uppercase text-white font-bold text-shadow-[0_-1px_0_rgba(0,0,0,0.2)]"
+          [routerLink]="['/hotels', hotel().id]"
+        >
+          View Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

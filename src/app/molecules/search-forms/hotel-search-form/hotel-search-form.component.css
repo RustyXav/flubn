@@ -1,0 +1,8 @@
+input {
+  padding: 5px 5px 8px 9px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+  margin-top: calc(var(--spacing) * 2) /* 0.25rem = 4px */;
+}
+ 

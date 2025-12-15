@@ -1,10 +1,39 @@
-<p>nav-bar works!</p>
-<nav>
-  @for (pathData of pathDatas; track $index) {
-  <li>
-    <a routerLink="{{ pathData.path }}" routerLinkActive="active">{{
-      pathData.label
-    }}</a>
-  </li>
+<ng-template #innerNavBar>
+  <nav class="sm:flex justify-center mt-6 sm:mt-0">
+    @for (data of pathData; track $index) {
+    <li class="p-2 block text-nowrap overflow-hidden" routerLinkActive="active">
+      <a routerLink="{{ data.path }}" (click)="closeMenu()">{{
+        data.label | uppercase
+      }}</a>
+    </li>
+    }
+  </nav>
+</ng-template>
+
+<div class="bg-black/10">
+  <div class="sm:block hidden">
+    <ng-container *ngTemplateOutlet="innerNavBar"></ng-container>
+  </div>
+
+  <!-- Burger Button -->
+  <button
+    class="fixed top-0 left-0 p-2 sm:hidden bg-white z-10"
+    (click)="toggleMenu()"
+  >
+    ☰
+  </button>
+
+  @if (isMenuOpen) {
+  <div class="fixed top-0 left-0 bottom-0 bg-white z-10 flex flex-col">
+    <div class="block">
+      <button
+        class="absolute top-0 right-0 text-shadow-md"
+        (click)="toggleMenu()"
+      >
+        ✖
+      </button>
+    </div>
+    <ng-container *ngTemplateOutlet="innerNavBar"></ng-container>
+  </div>
   }
-</nav>
+</div>
