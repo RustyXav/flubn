@@ -9,10 +9,10 @@ import { interval, Subscription } from 'rxjs';
 })
 export class CarouselComponent implements OnInit, OnDestroy {
   images = [
-    '/Carousel images/01.png',
-    '/Carousel images/02.png',
-    '/Carousel images/03.png',
-    '/Carousel images/04.png',
+    './Carousel images/01.png',
+    './Carousel images/02.png',
+    './Carousel images/03.png',
+    './Carousel images/04.png',
   ];
   currentIndex = 0;
   autoSlideSubscription!: Subscription;
