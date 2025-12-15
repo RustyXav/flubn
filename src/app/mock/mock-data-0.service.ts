@@ -11,7 +11,7 @@ export class MockData0Service {
   HotelsResultObservable: Observable<HotelsResult[]>;
 
   constructor() {
-    this.HotelsResultObservable = this.http.get<HotelsResult[]>("./hotels.json");
+    this.HotelsResultObservable = this.http.get<HotelsResult[]>("hotels.json");
     
   }
 }
