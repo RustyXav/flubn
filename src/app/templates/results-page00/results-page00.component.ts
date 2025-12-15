@@ -5,7 +5,7 @@ import {
   OnInit,
   signal,
 } from '@angular/core';
-import { HotelsResult } from "../../services/HotelsResult";
+import { HotelsResult } from '../../services/HotelsResult';
 import { SearchService } from '../../services/search.service';
 import { DataProviderService } from '../../services/data-provider.service';
 import { lastValueFrom } from 'rxjs';
@@ -13,6 +13,12 @@ import { HotelDescriptionOverlayComponent } from '../../molecules/hotel-descript
 import * as leafletTypes from 'leaflet';
 import { CurrencyService } from '../../services/currency.service';
 import { HotelCardComponent } from '../../molecules/hotel-card/hotel-card.component';
+
+leafletTypes.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'marker-icon-2x.png',
+  iconUrl: 'marker-icon.png',
+  shadowUrl: 'marker-shadow.png',
+});
 
 @Component({
   selector: 'app-results-page00',
